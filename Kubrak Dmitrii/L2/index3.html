@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее Задание 2</title>
+</head>
+<body>
+    <script>
+        var a = +prompt("Введите 1-е число: "),
+            b = +prompt("Введите 2-е число: "),
+            result;
+
+        if (a>=0 && b>=0) {
+            result = a-b;
+        }
+        else if (a<0 && b<0) {
+            result = a*b;
+        }
+        else if ((a>=0 && b<0) || (a<0 && b>=0)) {
+            result = a+b;
+        }
+        alert ("Ответ: "+result)
+    </script>
+</body>
+</html>

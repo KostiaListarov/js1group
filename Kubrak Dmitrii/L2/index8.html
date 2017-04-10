@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее Задание 2</title>
+</head>
+<body>
+    <script>
+        var val = +prompt("Введите число: "),
+            pow = +prompt("В какую степень вы его хотите возвести? ");
+
+        function power (val, pow) {
+            return pow <= 0 ? 1 : val * power (val, pow-1);
+        }
+        alert (power (val, pow));
+    </script>
+</body>
+</html>
