@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее Задание 2</title>
+</head>
+<body>
+    <script>
+        var arg1 = +prompt("Введите 1-е число: "),
+            arg2 = +prompt("Введите 2-е число: "),
+            operation = prompt("Введите арефметический знак: ");
+
+        function summa (arg1, arg2) {
+            return arg1 + arg2;
+        }
+        function minus (arg1, arg2) {
+            return arg1 - arg2;
+        }
+        function multiply (arg1, arg2) {
+            return arg1 * arg2;
+        }
+        function division (arg1, arg2) {
+            return arg1 / arg2;
+        }
+
+        function mathOperation (arg1, arg2, operation) {
+            switch (operation) {
+                case "+":
+                    return summa (arg1, arg2);
+                case '-':
+                    return minus (arg1, arg2);
+                case '/':
+                    return multiply (arg1, arg2);
+                case '*':
+                    return division (arg1, arg2);
+                default:
+                    return NaN;
+            }
+        }
+        alert(mathOperation(arg1, arg2, operation));
+    </script>
+</body>
+</html>
