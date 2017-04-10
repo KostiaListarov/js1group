@@ -21,6 +21,6 @@ switch(a) {
     case 12: console.log(a++);
     case 13: console.log(a++);
     case 14: console.log(a++);
-    case 15: console.log(a++);
+    case 15: console.log(a);
     default: break;
 }
