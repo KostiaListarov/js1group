@@ -14,20 +14,33 @@ alert(mathOperation(arg1, arg2, operation));
 function mathOperation(arg1, arg2, operation) {
     switch(operation) {
         case '+':
-            result = arg1 + arg2;
+            result = sum(arg1, arg2);
             break;
         case '-':
-            result = arg1 - arg2;
+            result = diff(arg1, arg2);
             break;
         case '/':
-            result = arg1 / arg2;
+            result = div(arg1, arg2);
             break;
         case '*':
-            result = arg1 * arg2;
+            result = mult(arg1, arg2);
             break;
         default:
             result = 'Неверная операция';
             break;
     }
     return result;
+}
+
+function sum(a, b) {
+    return 'Результат операции: ' + (a + b);
+}
+function diff(a, b) {
+    return 'Результат операции: ' + (a - b);
+}
+function div(a, b) {
+    return 'Результат операции: ' + (a / b);
+}
+function mult(a, b) {
+    return 'Результат операции: ' + (a * b);
 }
