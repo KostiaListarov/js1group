@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button id="luck">Проверить свое счастье</button>
+
+<script>
+  document.getElementById('luck').addEventListener('click', luck);
+
+  function luck(repeat) {
+    var result = prompt('Ты счаслив?');
+
+    if(result == 'Да') {
+      alert('Молодец!');
+      repeat = true;
+    } else {
+      alert('Заведи больше кошек!');
+      luck(repeat);
+    }
+  }
+</script>
+
+</body>
+</html>
