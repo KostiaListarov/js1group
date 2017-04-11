@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Счастливый билетик</title>
+</head>
+<body>
+<script type="text/javascript">
+	var ticket=+prompt('Введите шестизначный номер билета:'), 
+		n6 = ticket%10,
+	    n5 = (ticket%100 - ticket%10)/10,
+	    n4 = (ticket%1000 - ticket%100)/100,
+	    n3 = (ticket%10000 - ticket%1000)/1000,
+	    n2 = (ticket%100000 - ticket%10000)/10000,
+	    n1 = (ticket - ticket%100000)/100000,
+    message = (n1+n2+n3 == n4+n5+n6) ? 'Ура, билет счастливый!' : 'Увы, билет обычный...';
+  
+alert(message);
+</script>
+</body>
+</html>
