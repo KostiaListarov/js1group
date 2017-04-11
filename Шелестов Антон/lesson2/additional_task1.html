@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="" id="form">
+    <input type="text" id="first"> x<sup>2</sup> +
+    <input type="text" id="second"> x +
+    <input type="text" id="free"> = 0<br />
+    <button type="submit">Решить</button>
+</form>
+
+<script>
+  // вешаем событие submit на форму
+  document.getElementById('form').addEventListener('submit', answer);
+
+  function answer(e){
+    // отменяем стандартное поведение
+    e.preventDefault();
+
+    // определяем переменные
+    var a = +document.getElementById('first').value,
+      b = +document.getElementById('second').value,
+      c = +document.getElementById('free').value,
+      D,
+      x1,
+      x2,
+      result;
+
+    // проверяем на числа и на необходимые условия для формулы
+    a = (isNaN(a) || a == 0) ? 1 : a;
+    b = isNaN(a) ? 0 : b;
+    c = isNaN(a) ? 0 : c;
+
+    // вычисляем дискриминант
+    D = b * b - 4 * a * c;
+
+    // высчитываем корни исходя из результата дискриминанта
+    if(D < 0) {
+      result = 'Т.к. дискриминант меньше 0 (D < 0) то у данного уравнения корней небудет.';
+    } else if(D > 0) {
+      x1 = (- b - Math.sqrt(D)) / (2 * a);
+      x2 = (- b + Math.sqrt(D)) / (2 * a);
+      result = 'Т.к. дискриминант больше 0 (D > 0) то у данного уравнения будет 2 корня: x1 = ' + x1 + ' и x2 = ' + x2;
+    } else {
+      x1 = (- b - Math.sqrt(D)) / (2 * a);
+      result = 'Т.к. дискриминант равен 0 (D = 0) то у данного уравнения будет 1 корень: x = ' + x1;
+    }
+
+    // показываем рузультат
+    alert(result);
+  }
+</script>
+
+</body>
+</html>
