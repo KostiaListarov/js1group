@@ -23,8 +23,8 @@ function quadratic_equation(e) {
         var x2 = (-coefficient_2 - Math.sqrt(discriminant)) / (2 * coefficient_1);
 
         // Выводим значения
-        console.log(coefficient_1 + "x^2 + " + coefficient_2 + "x + " + coefficient_3 + " = 0");
-        console.log("Корни уровнения: " + '\n' + "x1 = " + x1 + '\t' + "x2 = " + x2);
+        alert(coefficient_1 + "x^2 + " + coefficient_2 + "x + " + coefficient_3 + " = 0" + '\n'
+                    + "Корни уравнения: " + '\n' + "x1 = " + x1 + '\t' + "x2 = " + x2);
     }
 
     else if (discriminant == 0) { // Если равен нулю
@@ -32,11 +32,11 @@ function quadratic_equation(e) {
         x1 = -coefficient_2 / (2 * coefficient_1);
 
         // Выводим значения
-        console.log("Уравнение имеет единственный корень: " + x1);
+        alert("Уравнение имеет единственный корень: " + x1);
     }
 
     else { // Если отрицательный
-        console.log("Уравнение корней не имеет");
+        alert("Уравнение корней не имеет");
     }
 
 }
