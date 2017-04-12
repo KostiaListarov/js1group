@@ -11,15 +11,14 @@
 <script>
   document.getElementById('luck').addEventListener('click', luck);
 
-  function luck(repeat) {
+  function luck() {
     var result = prompt('Ты счаслив?');
 
     if(result == 'Да') {
       alert('Молодец!');
-      repeat = true;
     } else {
       alert('Заведи больше кошек!');
-      luck(repeat);
+      luck();
     }
   }
 </script>
