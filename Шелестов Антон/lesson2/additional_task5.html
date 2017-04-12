@@ -9,12 +9,13 @@
 <button id="luck">Проверить свое счастье</button>
 
 <script>
+
+    // https://jsfiddle.net/w1qvgzr6/
+
   document.getElementById('luck').addEventListener('click', luck);
 
   function luck() {
-    var result = prompt('Ты счаслив?');
-
-    if(result == 'Да') {
+    if(prompt('Ты счаслив?') == 'Да') {
       alert('Молодец!');
     } else {
       alert('Заведи больше кошек!');
