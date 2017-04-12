@@ -1,0 +1,24 @@
+<script>
+	function mathOperation(arg1, arg2, operation) {
+		var value = null;
+		switch (operation) {
+			case "+":
+			value = arg1 + arg2;
+			return (value);
+			break;
+			case "-":
+			value = arg1 - arg2;
+			return (value);
+			break;
+			case "*":
+			value = arg1 * arg2;
+			return (value);
+			break;
+			case "/":
+			value = (arg1 / arg2).toFixed(2);
+			return (value);
+			break;
+		}
+	}
+	alert (mathOperation (43, 15, "/"));
+</script>
