@@ -9,19 +9,21 @@
 <button id="luck">Проверить свое счастье</button>
 
 <script>
+
+    // https://jsfiddle.net/w1qvgzr6/
+
   document.getElementById('luck').addEventListener('click', luck);
 
-  function luck(repeat) {
-    var result = prompt('Ты счаслив?');
-
-    if(result == 'Да') {
+  function luck() {
+    if(prompt('Ты счаслив?') == 'Да') {
       alert('Молодец!');
-      repeat = true;
     } else {
       alert('Заведи больше кошек!');
-      luck(repeat);
+      luck();
     }
   }
+
+  // без цикла больше кода получается
 </script>
 
 </body>
