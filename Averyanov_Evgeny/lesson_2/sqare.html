@@ -8,24 +8,23 @@
 	<script>
 	
 	var a = +prompt('enter 1st var'),
-	b = +prompt('enter 2st var'),
-	c = +prompt('enter 3st var'),
+	b = +prompt('enter 2nd var'),
+	c = +prompt('enter 3rd var'),
 	d = b*b-4*a*c;
 
-	alert('your equality ' + a + 'x^2' + ' + ' + b + 'x + ' + c);
+	alert('your equation ' + a + 'x^2' + ' + ' + b + 'x + ' + c);
 	alert(d);
 
 	if(d<0) {
-		alert('Корней нет');
+		alert('No roots');
 	} else if (d>0) {
 		alert ('x1 = ' + (-b + Math.sqrt(d))/2*a + ' x2 = ' + (-b - Math.sqrt(d))/2*a);
 	} else {
 		alert('x1 = x2 = ' + -(b/2*a));
 	}
-	// switch почему-то не работает, помогите найти ошибку plz
 	/*
 	switch (true) {
-		case d=0:
+		case d==0:
 		alert('x1 = x2 = ' + -(b/2*a));
 		break;
 
@@ -34,7 +33,7 @@
 		break;
 
 		case d<0:
-		alert('Корней нет');
+		alert('No roots');
 		break;
 	} 
 	*/
