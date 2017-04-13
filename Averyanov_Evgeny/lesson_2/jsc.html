@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	
+		var number = Math.round(Math.random() * (100));
+		console.log(number);
+		var i = 5; //счетчик попыток, их должно быть не больше 5
+		var a; 
+		//помогите найти ошибку, не работает функция(
+
+		function guessNumber(){	
+		var a = +prompt('Enter number from 0 to 100. 777 to EXIT. Tries left: ' + i);
+		i--;
+		  if(i<1){
+		  alert('You ran out of tries!')
+		  } else if(a==777){
+		  alert('Bye!')
+		  } else if(a == 0 || isNaN(a)){
+				alert('No number was entered');
+				guessNumber();
+			} else if(a==number) {
+				  alert('You win!');
+				} else if(a>number){
+					  alert('Too much!');
+					  guessNumber();
+					} else {
+						  alert('Too little!');
+						  guessNumber();
+		}
+		};
+
+	</script>
+</body>
+</html>
