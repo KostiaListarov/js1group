@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var a = Math.round(-9999 + Math.random()*(19998-0)), //задаем значение чисел от -9999 до 9999
+	b = Math.round(-9999 + Math.random()*(19998-0));
+	console.log(a);
+	console.log(b);
+	switch (true) {
+		case (a>=0 && b >=0):
+			alert(a - b);
+			break
+		case (a<0 && b<0):
+			alert(a*b);
+			break;
+		case ((a>=0 && b<0) || (a<0 && b>=0)):
+			alert(a+b);
+			break;
+	}
+
+	</script>
+</body>
+</html>
