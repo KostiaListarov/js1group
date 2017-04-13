@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<title>Document</title>
+</head>
+<body>
+6.  Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 3) и вернуть полученное значение (использовать switch).
+	<script>
+  var a = +prompt('Enter a'),
+  b = +prompt('Enter b'),
+  operation = prompt('Enter operation +, -, * or /');
+
+  
+ function funk(a,b,operation){
+      switch (operation){
+
+      case (operation='+'):
+      return(a + b);
+      case (operation=='-'):
+      return(a - b);
+      case (operation=='*'):
+      return(a * b);
+      case (operation=='/'):
+      return(a / b);
+      default:
+      alert('Type +, -, * or /!!!')
+
+      }
+    }
+
+  alert(funk(a,b,operation));
+
+
+	</script>
+</body>
+</html>
