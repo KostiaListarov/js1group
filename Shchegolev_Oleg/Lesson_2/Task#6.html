@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Task#6</title>
+    <meta charset="UTF-8">
+    <title>Task#6</title>
 </head>
+
 <body>
-	<script>
-		function mathOperation(x, y, operation) {
-			
-		}
-	</script>
+    <!--Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+    где arg1, arg2 – значения аргументов, operation – строка с названием операции.
+    В зависимости от переданного значения операции выполнить
+    одну из арифметических операций (использовать функции из пункта 3)
+    и вернуть полученное значение (использовать switch).-->
+    <script>
+    var arg1 = +prompt("Введите первое число:");
+    var arg2 = +prompt("Введите второе число:");
+    var user_operation = prompt("Введите математическую операцию:");
+    switch (user_operation) {
+        case "+":
+            alert("Сумма равна: " + (arg1 + arg2));
+            break;
+        case "-":
+            alert("Разность равна: " + (arg1 - arg2));
+            break;
+        case "*":
+            alert("Произведение равно: " + (arg1 * arg2));
+            break;
+        case "/":
+            alert("Частное равно: " + (arg1 / arg2));
+            break;
+        default:
+            alert("Операция введена не верно!");
+    }
+    </script>
 </body>
+
 </html>
