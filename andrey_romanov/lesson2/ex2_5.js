@@ -16,7 +16,8 @@ function divideNum(a,b) {
 var num1 = 15,
     num2 = 21;
 
-console.log(mathOperation(num1,num2,'+'));
-console.log(mathOperation(num1,num2,'-'));
-console.log(mathOperation(num1,num2,'*'));
-console.log(mathOperation(num1,num2,'/'));
+
+console.log(plusNum(num1,num2));
+console.log(minusNum(num1,num2));
+console.log(multipleNum(num1,num2));
+console.log(divideNum(num1,num2));

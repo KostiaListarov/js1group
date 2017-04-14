@@ -35,7 +35,8 @@ function mathOperation(arg1, arg2, operation) {
 var num1 = 15,
     num2 = 21;
 
-console.log(plusNum(num1,num2));
-console.log(minusNum(num1,num2));
-console.log(multipleNum(num1,num2));
-console.log(divideNum(num1,num2));
+
+console.log(num1 + ' + ' + num2 + ' = ' + mathOperation(num1,num2,'+'));
+console.log(num1 + ' - ' + num2 + ' = ' + mathOperation(num1,num2,'-'));
+console.log(num1 + ' * ' + num2 + ' = ' + mathOperation(num1,num2,'*'));
+console.log(num1 + ' / ' + num2 + ' = ' + mathOperation(num1,num2,'/'));
