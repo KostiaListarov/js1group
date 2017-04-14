@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        input {
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+
+<input type="number" id="first" placeholder="Первое число"><br /><br />
+<input type="number" id="second" placeholder="Второе число"><br /><br />
+<input type="text" id="result"><br /><br />
+<button data-operator="+">+</button>
+<button data-operator="-">-</button>
+<button data-operator="/">/</button>
+<button data-operator="*">*</button>
+<button data-operator="sqrt">&radic;</button>
+<button data-operator="abs">|x|</button>
+<button data-operator="acos">acos(x)</button>
+<button data-operator="acosh">acosh(x)</button>
+<button data-operator="asin">asin(x)</button>
+<button data-operator="asinh">asinh(x)</button>
+<button data-operator="atan">atan(x)</button>
+<button data-operator="atanh">atanh(x)</button>
+<button data-operator="atan2">atan2(x)</button>
+<button data-operator="cbrt">x<sup>3</sup></button>
+<button data-operator="cos">cos(x)</button>
+<button data-operator="cosh">cosh(x)</button>
+<button data-operator="exp">exp(x)</button>
+<button data-operator="expm1">expm1(x)</button>
+<button data-operator="log">log(x)</button>
+<button data-operator="log1p">log1p(x)</button>
+<button data-operator="log10">log10(x)</button>
+<button data-operator="log2">log2(x)</button>
+<button data-operator="sin">sin(x)</button>
+<button data-operator="sinh">sinh(x)</button>
+<button data-operator="tan">tan(x)</button>
+<button data-operator="tanh">tanh(x)</button>
+
+<script>
+  // online https://jsfiddle.net/deller21/abg5zgL5/3/
+  var buttons = document.getElementsByTagName('button');
+
+  for(var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', calcResult);
+  }
+
+  function calcResult(e) {
+    e.preventDefault();
+
+    var operator = this.getAttribute('data-operator'),
+      first_number = +document.getElementById('first').value,
+      second_number = +document.getElementById('second').value,
+      result_field = document.getElementById('result'),
+      result;
+
+    switch(operator) {
+      case '+':
+        result = first_number + second_number;
+        break;
+      case '-':
+        result = first_number - second_number;
+        break;
+      case '/':
+        if(!second_number) {
+          result = 'На ноль делить нельзя';
+        } else {
+          result = first_number / second_number;
+        }
+        break;
+      case '*':
+        result = first_number * second_number;
+        break;
+      case 'sqrt':
+        result = Math.sqrt(first_number);
+        break;
+      case 'abs':
+        result = Math.abs(first_number);
+        break;
+      case 'acos':
+        result = Math.acos(first_number);
+        break;
+      case 'acosh':
+        result = Math.acosh(first_number);
+        break;
+      case 'asin':
+        result = Math.asin(first_number);
+        break;
+      case 'asinh':
+        result = Math.asinh(first_number);
+        break;
+      case 'atan':
+        result = Math.atan(first_number);
+        break;
+      case 'atanh':
+        result = Math.atanh(first_number);
+        break;
+      case 'atan2':
+        result = Math.atan2(first_number);
+        break;
+      case 'cbrt':
+        result = Math.cbrt(first_number);
+        break;
+      case 'cos':
+        result = Math.cos(first_number);
+        break;
+      case 'cosh':
+        result = Math.cosh(first_number);
+        break;
+      case 'exp':
+        result = Math.exp(first_number);
+        break;
+      case 'expm1':
+        result = Math.expm1(first_number);
+        break;
+      case 'log':
+        result = Math.log(first_number);
+        break;
+      case 'log1p':
+        result = Math.log1p(first_number);
+        break;
+      case 'log10':
+        result = Math.log10(first_number);
+        break;
+      case 'log2':
+        result = Math.log2(first_number);
+        break;
+      case 'sin':
+        result = Math.sin(first_number);
+        break;
+      case 'sinh':
+        result = Math.sinh(first_number);
+        break;
+      case 'tan':
+        result = Math.tan(first_number);
+        break;
+      case 'tanh':
+        result = Math.tanh(first_number);
+        break;
+      default:
+        result = 'Недопустимая операция';
+        break;
+    }
+
+    if(isNaN(result)) {
+      result = 'Для данной операции не соблюдены условия решения';
+    }
+
+    result_field.value = result;
+  }
+</script>
+
+</body>
+</html>
