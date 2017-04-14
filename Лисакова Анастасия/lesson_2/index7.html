@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Квадратное уравнение</title>
+</head>
+
+<style>
+    #second, #third {
+        width: 150px;
+        height: 30px;
+    }
+    #first {
+        width: 250px;
+        height: 30px;
+    }
+    #button {
+        width: 100px;
+        height: 30px;
+        border-radius: 3px;
+        background-color: white;
+        color: darkslategrey;
+        outline: none;
+    }
+
+</style>
+<body>
+
+    <form action="" id="form" onsubmit="check()">
+        <input type="text" id="first" placeholder="Введите коэффициент а не равный 0">
+        <input type="text" id="second" placeholder="Введите коэффициент b">
+        <input type="text" id="third" placeholder="Введите коэффициент c">
+        <input type="submit" id="button">
+    </form>
+
+<script>
+    /*Написать программу вычисления решений x1 и x2 квадратного уравнения.
+    Для вычисления корня пользоваться функцией Math.sqrt(x). Важно реализовать это через текстовые поля <input>*/
+    function check () {
+        var e = window.event,
+                a = +document.getElementById('first').value,
+                b = +document.getElementById('second').value,
+                c = +document.getElementById('third').value,
+                x1, x2, d, i;
+        if (a == 0) {
+            alert('Введите коэффициент а отличный от 0');
+        } else {
+            d = b*b - 4 * a * c;
+            if (d < 0) {
+                alert('Квадратное уравнение не имеет корней');
+                /*Здесь попыталась написать через комплексные числа, но как задать мнимую единицу? Квадратный корень из -1 js не посчитает
+                Как тогда определить i - мнимую единицу?
+                x1 = (-b + i * Math.sqrt(d)) / 2 * a;
+                x2 = (-b - i * Math.sqrt(d)) / 2 * a;
+                alert('Дискриминант < 0, используем мнимую единицу. x1 = ' + x1.toFixed(2) + ', x2 = ' + x2.toFixed(2));*/
+            } else if (d == 0) {
+                x1 = -b / 2 * a;
+                alert('Дискриминант равен 0, уравнение имеет один корень. x = ' + x1);
+            } else if (d > 0) {
+                x1 = (-b + Math.sqrt(d)) / (2 * a);
+                x2 = (-b - Math.sqrt(d)) / (2 * a);
+                alert('x1 = ' + x1.toFixed(2) + ', x2 = ' + x2.toFixed(2));
+            }
+        }
+        e.preventDefault();
+    }
+
+</script>
+
+</body>
+</html>

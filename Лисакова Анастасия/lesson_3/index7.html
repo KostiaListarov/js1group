@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Доп задание 3</title>
+
+</head>
+<body>
+
+<script>
+    //дан массив ['1', '2', '3', '4', '5', '6']. Сделайте из него строку '16-25-34'. Массив может быть любым.
+    var array = ['1', '2', '3', '4', '5', '6'], str = '';
+
+    for (var i = 0; i < array.length / 2; i++) {
+        str = str + array[i] + array[array.length-i-1];
+        if (i != (array.length / 2) - 1) str = str + '-';
+    }
+
+    console.log(str);
+
+</script>
+
+</body>
+</html>

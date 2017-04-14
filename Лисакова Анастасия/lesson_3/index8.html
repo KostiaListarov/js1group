@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+    <style>
+        #second, #first, #res {
+            width: 150px;
+            height: 30px;
+        }
+
+        input[type="submit"] {
+            width: 100px;
+            height: 30px;
+            border-radius: 3px;
+            background-color: white;
+            color: darkslategrey;
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form action="" id="form" onsubmit="check()">
+        <input type="text" id="first" placeholder="Введите первое число">
+        <input type="text" id="second" placeholder="Введите второе число">
+        <input type="text" id="res" placeholder="Результат">
+        <input type="submit" id="sum" value="Сложение">
+        <input type="submit" id="sub" value="Вычитание">
+        <input type="submit" id="multi" value="Умножение">
+        <input type="submit" id="div" value="Деление">
+        <input type="submit" id="pow" value="Степень">
+        <input type="submit" id="max" value="Максимальное">
+    </form>
+
+<script>
+    function check () {
+        var e = window.event;
+        e.preventDefault();
+    }
+
+    function getVal (id) {
+       return +document.getElementById(id).value;
+    }
+
+    document.getElementById('sum').onclick = function () {
+        document.getElementById('res').value = getVal('first') + getVal('second');
+    };
+
+    document.getElementById('sub').onclick = function () {
+        document.getElementById('res').value = getVal('first') - getVal('second');
+    };
+
+    document.getElementById('multi').onclick = function () {
+        document.getElementById('res').value = getVal('first') * getVal('second');
+    };
+
+    document.getElementById('div').onclick = function () {
+        if (getVal('second') != 0) {
+            document.getElementById('res').value = (getVal('first') / getVal('second')).toFixed(3);
+        } else {
+            alert('Деление на 0');
+        }
+    };
+
+    document.getElementById('pow').onclick = function () {
+        document.getElementById('res').value = Math.pow(getVal('first'), getVal('second'));
+    };
+
+    document.getElementById('max').onclick = function () {
+        document.getElementById('res').value = Math.max(getVal('first'), getVal('second'));
+    };
+
+
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Простые числа</title>
+</head>
+<body>
+
+<script>
+    //С помощью цикла while вывести все простые числа в промежутке от 0 до 100
+    var i = 0;
+    while (i < 100) {
+        if (i === 1) {
+            document.writeln("");
+        }
+        else {
+            var j = 2;
+
+            while (i % j !== 0) {
+                j++;
+            }
+            if (i === j) {
+                document.writeln(i);
+            }
+        }
+        i++;
+    }
+
+
+
+</script>
+
+</body>
+</html>

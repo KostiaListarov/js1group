@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пятое и шестое задания</title>
+</head>
+    <style>
+        #first, #second {
+            width: 150px;
+            height: 30px;
+            outline: none;
+    }
+        #operation {
+            width: 300px;
+            height: 30px;
+            outline: none;
+        }
+        #button {
+            width: 100px;
+            height: 30px;
+            border-radius: 3px;
+            background-color: white;
+            color: darkslategrey;
+            outline: none;
+    }
+
+    </style>
+
+<body>
+
+    <form action="" id="form" onsubmit="check()">
+        <input type="text" id="first" placeholder="Введите первое число">
+        <input type="text" id="second" placeholder="Введите второе число">
+        <input type="text" id="operation" placeholder="Что будем делать? Введите операцию: + - / *">
+        <input type="submit" id="button">
+    </form>
+<script>
+    /*Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+    где arg1, arg2 – значения аргументов, operation – строка с названием операции.
+    В зависимости от переданного значения операции выполнить одну из арифметических операций
+    (использовать функции из пункта 3) и вернуть полученное значение (использовать switch).*/
+
+    function check () {
+        var e = window.event,
+                num1 = document.getElementById('first').value,
+                num2 = document.getElementById('second').value,
+                operation = document.getElementById('operation').value;
+        mathOperation(num1, num2, operation);
+        e.preventDefault();
+    }
+
+        function mathOperation(num1, num2, operation) {
+            switch (operation) {
+                case '+': alert('Сумма чисел = ' + sum(num1, num2)); break;
+                case '-': alert('Разность = ' + sub(num1, num2)); break;
+                case '/': alert('Частное = ' + div(num1, num2)); break;
+                case '*': alert('Произведение= ' + multi(num1, num2)); break;
+            }
+        }
+
+        function sum(num1, num2) {
+                res = +num1 + +num2;
+                return res;
+        }
+        function sub(num1, num2) {
+                res = +num1 - +num2;
+                return res;
+        }
+        function multi(num1, num2) {
+                res = +num1 * +num2;
+                return res;
+        }
+        function div(num1, num2) {
+                res = (+num1 / +num2).toFixed(3);
+                return res;
+        }
+
+
+
+</script>
+
+</body>
+</html>

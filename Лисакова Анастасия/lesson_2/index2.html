@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Третье задание</title>
+</head>
+
+<style>
+    #first, #second {
+        width: 150px;
+        height: 30px;
+    }
+    #button {
+        width: 100px;
+        height: 30px;
+        border-radius: 3px;
+        background-color: white;
+        color: darkslategrey;
+        outline: none;
+    }
+
+</style>
+
+<body>
+
+<form action="" id="form" onsubmit="check()">
+    <input type="text" id="first" placeholder="Введите первое число">
+    <input type="text" id="second" placeholder="Введите второе число">
+    <input type="submit" id="button">
+</form>
+
+
+<script>
+    /*Объявить две целочисленные переменные a и b и задать им произвольные начальные значения.
+    Затем написать скрипт, который работает по следующему принципу:
+если a и b положительные, вывести их разность;
+если а и b отрицательные, вывести их произведение;
+если а и b разных знаков, вывести их сумму;
+ноль можно считать положительным числом.*/
+
+    function check () {
+        var e = window.event,
+                num1 = document.getElementById('first').value,
+                num2 = document.getElementById('second').value,
+                res;
+
+        if (+num1 >= 0 && +num2 >= 0) {
+            res = +num1 - +num2;
+            alert(res);
+        } else if (+num1 < 0 && +num2 < 0) {
+            res = +num1 * +num2;
+            alert(res);
+        } else if ((+num1 < 0 && +num2 >= 0) || (+num1 >= 0 && +num2 < 0)) {
+            res = +num1 + +num2;
+            alert(res);
+        }
+        e.preventDefault();
+    }
+
+
+
+</script>
+
+
+</body>
+</html>

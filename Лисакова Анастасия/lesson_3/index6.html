@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Доп. задание 2</title>
+</head>
+<body>
+
+<script>
+    //- дан массив с числами. Подсчитайте количество цифр 3 в данном массиве. Пример: [13, 35, 3, 443] - в массиве 4 цифры 3.
+
+    var array = [3, 5, 43, 76, 53, 93], str = '', count = 0;
+
+    for (var i = 0; i < array.length; i++ ) {
+        str = str + array[i];
+    }
+
+    for (var j = 0; j < str.length; j++) {
+        if (str[j] == '3') count++;
+    }
+
+    console.log('Цифра 3 встречается ' + count + ' раз в строке ' + str);
+
+
+
+
+</script>
+
+</body>
+</html>
