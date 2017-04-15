@@ -28,7 +28,7 @@
         function happy(){
  var happy= confirm('Ты счастлив?')
  if(happy==true){
- alert('Молодец')
+ alert('Поздравляю тебя)')
  }
  if (happy==false){
  alert('Заведи больше кошек')
