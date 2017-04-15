@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<title>Document</title>
+</head>
+<body>
+
+	<script>
+  var n = 0;
+
+do{
+  var i = n%2;
+
+  switch (n){
+    case 0:
+    alert(n + ' это ноль');
+    break;
+    case 1:
+    alert(n + ' - нечетное');
+    break;
+    default:
+      switch (i) {
+      case 0:
+      alert(n + ' - четное');
+      break;
+      case 1:
+      alert(n + ' - нечетное');
+      break;
+      }
+  }
+  
+  n++; 
+} while (n<=100);
+	</script>
+</body>
+</html>

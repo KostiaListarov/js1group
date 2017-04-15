@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<title>Document</title>
+</head>
+<body>
+
+	<script>
+  var n = 1,
+  simplelane = [];
+  //создадим функцию проверки на простое число
+  function simple(n){
+    if (n==1) //единица не явяется простым числом, это false
+      return false;
+    var i = 2; 
+    while (i<=Math.sqrt(n)){//разделим n на 2 и все числа меньшие или равные корню n
+      if (n%i===0){//если n без остатка поделилось хотя бы на одно число из этого диапазона - оно составное
+        return false;
+      } i++;
+    }
+    return true; //если n не поделилось без остатка, значит оно простое
+  }
+
+  while(n<=100){
+    simple(n); //вызов функции проверки на простое число
+    if (simple(n)===true){
+      simplelane.push(' ' + n); //если простое, то добавляем в массив (пробел для удобства чтения)
+    } 
+    n++; //иначе - исследуем следующее число
+  }
+
+ alert(simplelane);
+	</script>
+</body>
+</html>
